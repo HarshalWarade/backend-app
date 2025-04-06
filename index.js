@@ -54,6 +54,11 @@ app.get("/messages", async (req, res) => {
   }
 })
 
+
+app.get('/', (req, res) => {
+  return res.send("On /")
+})
+
 io.on("connection", async (socket) => {
 //   console.log("user connected:", socket.id)
 
