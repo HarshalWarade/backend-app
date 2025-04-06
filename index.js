@@ -17,7 +17,7 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", 
+    origin: "https://frontend-app-fjf9.onrender.com", 
     methods: ["GET", "POST"],
   },
 })
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://frontend-app-fjf9.onrender.com",
   credentials: true,
 }
 app.use(cors(corsOptions))
